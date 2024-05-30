@@ -1,14 +1,15 @@
 databases:
   - name: postgres
-    ipAllowList: []
-    databaseName: my_app_render
-    user: my_app_render
+    databaseName: test_app_6ngu
+    user: test_app
+    plan: free
 
 services:
   - type: web
-    name: my_app_render
-    env: ruby
-    buildCommand: "./render-build.sh"
+    name: my_app
+    runtime: ruby
+    plan: free
+    buildCommand: "./bin/render-build.sh"
     startCommand: "bundle exec rails s"
     envVars:
       - key: DATABASE_URL
