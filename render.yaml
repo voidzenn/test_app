@@ -1,6 +1,6 @@
 databases:
-  - name: postgres
-    databaseName: test_app_6ngu
+  - name: test_app
+    databaseName: test_app
     user: test_app
     plan: free
 
@@ -14,7 +14,7 @@ services:
     envVars:
       - key: DATABASE_URL
         fromDatabase:
-          name: postgres
+          name: test_app
           property: connectionString
       - key: RAILS_MASTER_KEY
         sync: false
