@@ -49,6 +49,9 @@ group :development, :test do
   gem "debug", platforms: %i[ mri windows ]
   gem "rubocop"
   gem "rubocop-rails"
+  gem "rspec"
+  gem "rspec-rails"
+  gem "dotenv-rails"
 end
 
 group :development do
