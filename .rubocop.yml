@@ -7,6 +7,7 @@ AllCops:
     - script/**/*
     - bin/**/*
     - test/**/*
+    - spec/**/*
     - app/admin/**/*
     - app/channels/**/*
     - app/jobs/**/*
@@ -63,3 +64,30 @@ Lint/UnusedMethodArgument:
 
 Rails/HasAndBelongsToMany:
   Enabled: false
+
+# Additional recommendations
+
+# Avoids complex blocks in methods, promotes readability.
+Metrics/BlockLength:
+  Max: 25
+
+# Ensures methods are concise and readable.
+Metrics/MethodLength:
+  Max: 25
+
+# Helps maintain a good class size.
+Metrics/ClassLength:
+  Max: 250
+
+# Avoid deep nesting, which can make code harder to read.
+Metrics/BlockNesting:
+  Max: 2
+
+# Prefers consistent naming of variables.
+Naming/VariableName:
+  Enabled: true
+  EnforcedStyle: snake_case
+
+# Avoids excessive parameter lists in methods.
+Metrics/ParameterLists:
+  Max: 5
