@@ -80,4 +80,4 @@ test:
 #
 production:
   <<: *default
-  database: postgres
+  database: <%= ENV['DATABASE_NAME'] %>
